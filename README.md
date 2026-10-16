@@ -1,5 +1,7 @@
 # 📖 Agenda de Contactos CLI
 
+> 🔗 **Repositorio remoto:** https://github.com/XanaduZephyr/contact_list
+
 ## 📝 Descripción del Proyecto
 
 Este es un proyecto de consola desarrollado en **Dart** que permite gestionar una agenda telefónica básica. La aplicación cuenta con un menú interactivo con opciones para agregar, listar, buscar y eliminar contactos.
@@ -16,7 +18,9 @@ A continuación, se detalla el equipo de aprendices involucrados en el desarroll
 | **[Nombre Aprendiz 2]** | **Desarrollador Feature** (Rama `feature/listar`) | Creación del modelo `Contacto` y lógica de la opción de **Listar** contactos. |
 | **[Nombre Aprendiz 3]** | **Desarrollador Feature** (Rama `feature/gestion`) | Implementación de los algoritmos para **Buscar** y **Eliminar** contactos en la lista. |
 
-> ⚠️ **Para completar la entrega:** reemplaza `[Nombre Aprendiz 2]` y `[Nombre Aprendiz 3]` por los nombres reales del equipo, agrega el enlace del repositorio remoto y publica con `git remote add origin <URL>` y `git push -u origin main --tags`.
+> ⚠️ **Para completar la entrega:** reemplaza `[Nombre Aprendiz 2]` y `[Nombre Aprendiz 3]` por los nombres reales del equipo.
+>
+> 📌 **Estado de publicación:** repositorio publicado en `https://github.com/XanaduZephyr/contact_list` con las ramas `main`, `develop`, `release/1.0.0`, `feature/agregar`, `feature/listar`, `feature/gestion` y los tags de versión `v1.0.0` / `v1.0.1`.
 
 ## 🧱 Estructura de Carpetas
 
