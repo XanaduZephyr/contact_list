@@ -3,6 +3,23 @@ import 'dart:io';
 // Aprendiz 2 (rama feature/listar): el modelo ahora vive en lib/contact.dart
 import 'contact.dart';
 
+/// Lee una línea de texto desde consola validando que no esté vacía.
+///
+/// Aprendiz 1 (rama `feature/agregar`): función auxiliar para la
+/// entrada de datos del usuario.
+String leerTexto(String mensaje) {
+  while (true) {
+    stdout.write(mensaje);
+    final String? entrada = stdin.readLineSync();
+
+    if (entrada == null || entrada.trim().isEmpty) {
+      stderr.writeln('El dato no puede estar vacío. Inténtalo de nuevo.');
+      continue;
+    }
+    return entrada.trim();
+  }
+}
+
 void main() {
   List<Contacto> agenda = [];
   bool ejecutando = true;
@@ -20,7 +37,21 @@ void main() {
 
     switch (opcion) {
       case '1':
-        // TODO: Aprendiz 1 - Implementar lógica para agregar
+        // Aprendiz 1 - Implementar lógica para agregar
+        print('\n--- Agregar Contacto ---');
+        final String nombre = leerTexto('Nombre del contacto: ');
+        final String telefono = leerTexto('Teléfono del contacto: ');
+
+        // Validación: no se permiten teléfonos duplicados en la agenda.
+        final bool telefonoRepetido =
+            agenda.any((Contacto c) => c.telefono == telefono);
+
+        if (telefonoRepetido) {
+          print('Ya existe un contacto con el teléfono $telefono.');
+        } else {
+          agenda.add(Contacto(nombre, telefono));
+          print('Contacto "$nombre" agregado. Total en agenda: ${agenda.length}.');
+        }
         break;
       case '2':
         // Aprendiz 2 - Implementar lógica para listar
